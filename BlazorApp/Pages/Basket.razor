@@ -1,0 +1,25 @@
+﻿@page "/Basket"
+<h3>Корзина:</h3>
+
+@inject IBasket _Basket;
+
+@foreach (var item in basketProducts)
+{
+    <div style="background-color: lightyellow; margin: 20px">
+        @item.Key.Name: @item.Key.Price руб. * @item.Value
+        <div>ИТОГО: @GetTotalPrice(item.Key.Price, item.Value) руб.</div>
+    </div>
+}
+
+
+@code {
+    IDictionary<Product, int> basketProducts;
+    
+    protected override void OnInitialized()
+    {
+        basketProducts = _Basket.GetBasketProducts();
+    }
+
+    public decimal GetTotalPrice(decimal price, decimal count) => price * count;
+
+}

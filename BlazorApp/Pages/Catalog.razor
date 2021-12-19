@@ -1,0 +1,53 @@
+﻿@page "/Catalog"
+
+@inject ICatalog _Catalog;
+@inject IBasket _Basket;
+
+<h2>Каталог товаров:</h2>
+
+<div style="box-sizing: border-box; display: flex; flex-wrap: wrap;">
+    @*с циклом for вылетают исключения*@
+    @*@for (int i = 0; i < productList.Count; i++)
+    {
+        <div style="width: 300px; margin: 30px; padding: 10px; box-sizing: border-box">
+            <h3 style="font-size: 20px">@productList[i].Name</h3>
+            <h3>@productList[i].Price руб.</h3>
+            <img style = "width: 250px; height: 350px" src=@productList[i].Url>
+            <div style="margin-top: 10px">
+                <button style="background-color: aquamarine; width: 250px; height: 60px;" 
+                        @onclick="f=> AddToBasket(productList[i])">Купить</button> 
+            </div>
+        </div>  
+    }*@
+    @foreach (var item in productList)
+    {
+        <div style="width: 300px; margin: 30px; padding: 10px; box-sizing: border-box">
+            <h3 style="font-size: 20px">@item.Name</h3>
+            <h3>@item.Price руб.</h3>
+            <img style="width: 250px; height: 350px" src=@item.Url>
+            <div style="margin-top: 10px">
+                <button style="background-color: aquamarine; width: 250px; height: 60px;"
+                        @onclick="f => AddToBasket(item)">Купить</button>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    IList<Product> productList;
+    IDictionary<Product, int> basketProducts = new Dictionary<Product, int>();
+
+    Product p;
+    
+    protected override void OnInitialized()
+    {
+        productList = _Catalog.GetProductList();
+        p = new Product("sss", 200m, "");
+        basketProducts = _Basket.GetBasketProducts();
+    }
+
+    private void AddToBasket(Product product)
+    {
+        _Basket.AddToBasket(product);
+    }
+}
