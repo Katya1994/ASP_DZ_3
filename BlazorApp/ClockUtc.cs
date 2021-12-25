@@ -1,6 +1,6 @@
 ﻿namespace BlazorApp;
 
-public class MyDateTimeUTC: IMyDateTime
+public class ClockUtc: IClock
 {
     public DateTime GetCurrentDate()
     {

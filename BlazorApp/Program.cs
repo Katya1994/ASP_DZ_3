@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<IMyDateTime, MyDateTimeUTC>();
+builder.Services.AddSingleton<IClock, ClockUtc>();
 builder.Services.AddSingleton<ICatalog, SimpleCatalog>();
 builder.Services.AddSingleton<IBasket, SimpleBasket>();
 

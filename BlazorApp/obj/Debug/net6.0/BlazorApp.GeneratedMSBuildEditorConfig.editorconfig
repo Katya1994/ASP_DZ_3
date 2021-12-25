@@ -8,57 +8,69 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BlazorApp
 build_property.RootNamespace = BlazorApp
-build_property.ProjectDir = C:\Users\Kate\Desktop\Solution_исх\BlazorApp\
+build_property.ProjectDir = C:\Users\Kate\Desktop\Solution_исх — копия\BlazorApp\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Kate\Desktop\Solution_исх\BlazorApp
+build_property.MSBuildProjectDirectory = C:\Users\Kate\Desktop\Solution_исх — копия\BlazorApp
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Kate/Desktop/Solution_исх/BlazorApp/App.razor]
+[C:/Users/Kate/Desktop/Solution_исх — копия/BlazorApp/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kate/Desktop/Solution_исх/BlazorApp/Pages/Basket.razor]
+[C:/Users/Kate/Desktop/Solution_исх — копия/BlazorApp/Pages/Basket.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmFza2V0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kate/Desktop/Solution_исх/BlazorApp/Pages/Catalog.razor]
+[C:/Users/Kate/Desktop/Solution_исх — копия/BlazorApp/Pages/Catalog.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0YWxvZy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kate/Desktop/Solution_исх/BlazorApp/Pages/Counter.razor]
+[C:/Users/Kate/Desktop/Solution_исх — копия/BlazorApp/Pages/CatalogForProductItem.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0YWxvZ0ZvclByb2R1Y3RJdGVtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kate/Desktop/Solution_исх — копия/BlazorApp/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kate/Desktop/Solution_исх/BlazorApp/Pages/Index.razor]
+[C:/Users/Kate/Desktop/Solution_исх — копия/BlazorApp/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kate/Desktop/Solution_исх/BlazorApp/Shared/SurveyPrompt.razor]
+[C:/Users/Kate/Desktop/Solution_исх — копия/BlazorApp/Pages/ProductInfo.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdEluZm8ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kate/Desktop/Solution_исх — копия/BlazorApp/Pages/ProductItem.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdEl0ZW0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kate/Desktop/Solution_исх — копия/BlazorApp/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kate/Desktop/Solution_исх/BlazorApp/_Imports.razor]
+[C:/Users/Kate/Desktop/Solution_исх — копия/BlazorApp/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kate/Desktop/Solution_исх/BlazorApp/Shared/MainLayout.razor]
+[C:/Users/Kate/Desktop/Solution_исх — копия/BlazorApp/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-3dsd3z3yec
 
-[C:/Users/Kate/Desktop/Solution_исх/BlazorApp/Shared/NavMenu.razor]
+[C:/Users/Kate/Desktop/Solution_исх — копия/BlazorApp/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-7cxxmz0cwl
 
-[C:/Users/Kate/Desktop/Solution_исх/BlazorApp/Pages/_Host.cshtml]
+[C:/Users/Kate/Desktop/Solution_исх — копия/BlazorApp/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kate/Desktop/Solution_исх/BlazorApp/Pages/_Layout.cshtml]
+[C:/Users/Kate/Desktop/Solution_исх — копия/BlazorApp/Pages/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kate/Desktop/Solution_исх/BlazorApp/wwwroot/css/Error.cshtml]
+[C:/Users/Kate/Desktop/Solution_исх — копия/BlazorApp/wwwroot/css/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxjc3NcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

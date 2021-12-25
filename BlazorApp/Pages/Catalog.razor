@@ -1,28 +1,31 @@
-﻿@page "/Catalog"
+﻿@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
+@page "/Catalog"
 
 @inject ICatalog _Catalog;
 @inject IBasket _Basket;
+@inject ProtectedLocalStorage _localStorage;
 
-<h2>Каталог товаров:</h2>
-
+<h2>Общий Каталог:</h2>
 <div style="box-sizing: border-box; display: flex; flex-wrap: wrap;">
-    @*с циклом for вылетают исключения*@
-    @*@for (int i = 0; i < productList.Count; i++)
-    {
-        <div style="width: 300px; margin: 30px; padding: 10px; box-sizing: border-box">
-            <h3 style="font-size: 20px">@productList[i].Name</h3>
-            <h3>@productList[i].Price руб.</h3>
-            <img style = "width: 250px; height: 350px" src=@productList[i].Url>
-            <div style="margin-top: 10px">
-                <button style="background-color: aquamarine; width: 250px; height: 60px;" 
-                        @onclick="f=> AddToBasket(productList[i])">Купить</button> 
-            </div>
-        </div>  
-    }*@
     @foreach (var item in productList)
     {
+        <div style="width: 200px; margin: 10px; padding: 10px; box-sizing: border-box; background-color: #6f42c1">
+            <h1 style="color: white" >@item.Key.ToString()</h1>
+            <button @onclick="f => GetSelectedCatalog(item.Key)">Show category</button>
+        </div>
+    }
+</div>
+<section style="background-color: #343a40; width: 100%; height: 10px;"></section>
+<h2>Каталог категории:</h2>
+<div style="box-sizing: border-box; display: flex; flex-wrap: wrap;">
+    @foreach (var item in selectedList)
+    {
         <div style="width: 300px; margin: 30px; padding: 10px; box-sizing: border-box">
-            <h3 style="font-size: 20px">@item.Name</h3>
+            <h3 style="font-size: 20px">
+                <NavLink href="@($"ProductInfo/{item.Name}")">
+                     @item.Name
+                </NavLink>
+            </h3>
             <h3>@item.Price руб.</h3>
             <img style="width: 250px; height: 350px" src=@item.Url>
             <div style="margin-top: 10px">
@@ -34,20 +37,26 @@
 </div>
 
 @code {
-    IList<Product> productList;
-    IDictionary<Product, int> basketProducts = new Dictionary<Product, int>();
+    IDictionary<Category, List<Product>> productList;
+    Dictionary<Product, int> basketProducts = new Dictionary<Product, int>();
+    IList<Product> selectedList = new List<Product>();
 
-    Product p;
-    
     protected override void OnInitialized()
     {
         productList = _Catalog.GetProductList();
-        p = new Product("sss", 200m, "");
         basketProducts = _Basket.GetBasketProducts();
     }
 
     private void AddToBasket(Product product)
     {
         _Basket.AddToBasket(product);
+        //SaveBasketProducts(product);
     }
+
+    private void GetSelectedCatalog(Category category) => selectedList = productList[category];
+    
+    // private void SaveBasketProducts(Product product)
+    // {
+    //     _localStorage.SetAsync("myBasket", product);
+    // }
 }

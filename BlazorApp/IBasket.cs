@@ -3,6 +3,7 @@
 public interface IBasket
 {
     public void AddToBasket(Product product);
-    public IDictionary<Product, int> GetBasketProducts();
+    public Dictionary<Product, int> GetBasketProducts();
     public void ClearBasket();
+    public void DeleteProduct(Product product);
 }

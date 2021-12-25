@@ -1,6 +1,6 @@
 ﻿namespace BlazorApp;
 
-public interface IMyDateTime
+public interface IClock
 {
     DateTime GetCurrentDate();
 }

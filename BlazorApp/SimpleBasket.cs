@@ -2,7 +2,7 @@
 
 public class SimpleBasket: IBasket
 {
-    private IDictionary<Product, int> basketProducts = new Dictionary<Product, int>();
+    private Dictionary<Product, int> basketProducts = new Dictionary<Product, int>();
     private object locker = new object();
         
     public void AddToBasket(Product product)
@@ -16,13 +16,24 @@ public class SimpleBasket: IBasket
         }
     }
 
-    public IDictionary<Product, int> GetBasketProducts()
+    public Dictionary<Product, int> GetBasketProducts()
     {
         return basketProducts;
     }
 
     public void ClearBasket()
     {
-        basketProducts.Clear();
+        lock (locker)
+        {
+            basketProducts.Clear();
+        }
+    }
+
+    public void DeleteProduct(Product product)
+    {
+        lock (locker)
+        {
+            basketProducts.Remove(product);
+        }
     }
 }
